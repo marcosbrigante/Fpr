@@ -44,7 +44,7 @@ namespace Fpr.Tests
         public Nullable<Guid> CityId { get; set; }
         public byte[] Picture { get; set; }
         public List<string> Countries { get; set; }
-        public IReadOnlyList<string> ReadOnlyCountries { get; set; }
+        public IList<string> ReadOnlyCountries { get; set; }
         public ICollection<string> XX { get; set; }
         public List<int> YY { get; set; }
         public IList<int> ZZ { get; set; }
@@ -64,7 +64,7 @@ namespace Fpr.Tests
         public Nullable<Guid> CityId { get; set; }
         public byte[] Picture { get; set; }
         public ICollection<string> Countries { get; set; }
-        public IReadOnlyList<string> ReadOnlyCountries { get; set; }
+        public IList<string> ReadOnlyCountries { get; set; }
         public IEnumerable<string> XX { get; set; }
         public IList<int> YY { get; set; }
         public List<int> ZZ { get; set; }

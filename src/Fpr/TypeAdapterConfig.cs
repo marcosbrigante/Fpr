@@ -447,7 +447,7 @@ namespace Fpr
             Type configType = typeof(TypeAdapterConfig<,>).MakeGenericType(sourceType, destType);
             var property = configType.GetProperty("ConfigSettings", BindingFlags.Static | BindingFlags.NonPublic);
 
-            var configSettings = (TypeAdapterConfigSettingsBase)property.GetValue(config);
+            var configSettings = (TypeAdapterConfigSettingsBase)property.GetValue(config, null);
 
             if (configSettings != null)
             {
@@ -554,7 +554,7 @@ namespace Fpr
                         Type configType = typeof(TypeAdapterConfig<,>).MakeGenericType(sourceType, destType);
                         var property = configType.GetProperty("ConfigSettings", BindingFlags.Static | BindingFlags.NonPublic);
 
-                        var baseConfigSettings = (TypeAdapterConfigSettingsBase)property.GetValue(baseConfig);
+                        var baseConfigSettings = (TypeAdapterConfigSettingsBase)property.GetValue(baseConfig, null);
 
                         configSettings = new TypeAdapterConfigSettings<TSource, TDestination>
                         {
@@ -614,7 +614,7 @@ namespace Fpr
                 Type configType = typeof (TypeAdapterConfig<,>).MakeGenericType(_configSettings.InheritedSourceType, _configSettings.InheritedDestinationType);
                 var property = configType.GetProperty("ConfigSettings", BindingFlags.Static | BindingFlags.NonPublic);
 
-                var baseConfigSettings = (TypeAdapterConfigSettingsBase) property.GetValue(baseConfig);
+                var baseConfigSettings = (TypeAdapterConfigSettingsBase) property.GetValue(baseConfig, null);
 
                 if (_configSettings.IgnoreNullValues == null)
                     _configSettings.IgnoreNullValues = baseConfigSettings.IgnoreNullValues;

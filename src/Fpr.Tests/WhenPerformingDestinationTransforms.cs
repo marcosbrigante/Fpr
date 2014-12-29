@@ -99,7 +99,7 @@ namespace Fpr.Tests
             public Guid Id { get; set; }
             public string Name { get; set; }
 
-            public IReadOnlyList<ChildDto> Children { get; protected set; }
+            public IList<ChildDto> Children { get; protected set; }
         }
 
         #endregion
