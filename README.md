@@ -1,6 +1,6 @@
-##Fpr - The Mapper of Your Domain
+Ported to .NET Framework 4.0
 
-[![Build status](https://ci.appveyor.com/api/projects/status/krpp0nhspmklom1d?svg=true)](https://ci.appveyor.com/project/eswann/fpr)
+##Fpr - The Mapper of Your Domain
 
 A fast, fun and stimulating object to object mapper for .Net 4.5.  
 
